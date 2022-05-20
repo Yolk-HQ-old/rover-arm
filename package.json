@@ -1,0 +1,6 @@
+{
+  "name": "@apollo/rover",
+  "scripts": {
+    "postinstall": "./install.sh"
+  }
+}
