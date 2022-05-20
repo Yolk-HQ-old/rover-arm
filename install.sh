@@ -15,13 +15,13 @@ install_from_source () {
   cargo run --release -- install
 
   mkdir -p node_modules/.bin
-  cp /tmp/rover/target/release/rover node_modules/.bin/rover
+  mv /tmp/rover/target/release/rover .
 }
 
 install_with_curl(){
   curl -sSL https://rover.apollo.dev/nix/$ROVER_VERSION | sh
   mkdir -p node_modules/.bin
-  cp $HOME/.rover/bin/rover node_modules/.bin/rover
+  mv $HOME/.rover/bin/rover .
 }
 
 if [ "$ARCHITECTURE" = "aarch64" -a "$OS" = "Linux" ]; then

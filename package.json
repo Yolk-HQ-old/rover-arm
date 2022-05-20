@@ -1,6 +1,9 @@
 {
   "name": "@apollo/rover",
   "scripts": {
-    "postinstall": "./install.sh"
+    "preinstall": "./install.sh"
+  },
+  "bin": {
+    "rover": "./rover"
   }
 }
