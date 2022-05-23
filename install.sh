@@ -34,8 +34,7 @@ install_from_source () {
   cargo run --release -- install
   popd
 
-  mkdir -p node_modules/.bin
-  mv /tmp/rover/target/release/rover node_modules/.bin
+  mv /tmp/rover/target/release/rover .
 
   echo "==> Cleaning up"
   rm -Rf /tmp/rover
@@ -46,8 +45,7 @@ install_from_source () {
 
 install_with_curl(){
   curl -sSL https://rover.apollo.dev/nix/$ROVER_VERSION | sh
-  mkdir -p node_modules/.bin
-  mv $HOME/.rover/bin/rover node_modules/.bin
+  mv $HOME/.rover/bin/rover .
 }
 
 if [ "$ARCHITECTURE" = "aarch64" -a "$OS" = "Linux" ]; then
