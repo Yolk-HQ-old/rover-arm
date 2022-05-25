@@ -6,5 +6,4 @@ RUN chown -R node:node /app
 USER node
 RUN pnpm add "tuxmachine/rover-arm#master"
 
-ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["node_modules/.bin/rover"]
+ENTRYPOINT ["node_modules/.bin/rover"]
