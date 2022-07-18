@@ -2,8 +2,8 @@
 
 set -e
 
-ROVER_VERSION="v0.5.1"
-ARCHITECTURE=$(arch)
+ROVER_VERSION="v0.7.0"
+ARCHITECTURE=$(arch || uname -m)
 OS=$(uname -s)
 
 has_cargo() {
@@ -44,7 +44,7 @@ install_from_source () {
 }
 
 install_with_curl(){
-  curl -sSL https://rover.apollo.dev/nix/$ROVER_VERSION | sh
+  curl -sSL https://rover.apollo.dev/nix/$ROVER_VERSION | sh -s -- --force
   mv $HOME/.rover/bin/rover .
 }
 
