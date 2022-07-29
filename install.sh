@@ -2,7 +2,7 @@
 
 set -e
 
-ROVER_VERSION="v0.7.0"
+ROVER_VERSION="v0.8.1"
 ARCHITECTURE=$(arch || uname -m)
 OS=$(uname -s)
 
